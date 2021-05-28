@@ -25,7 +25,7 @@ ul {
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .gallery {
@@ -112,6 +112,6 @@ h1 {
 }
 
 .card-container .card-back h2 {
-    padding: 10% 0%;
-    font-size: 25px;
+    padding: 20% 0%;
+    font-size: 35px;
 }
