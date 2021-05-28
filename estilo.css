@@ -1,0 +1,118 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: -webkit-gradient(linear, left top, right top, from(#d3f344), to(#e43c09));
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after,
+.gallery:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* -------------------------------- galleria --------------------- */
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.gallery {
+    width: 100%;
+
+}
+
+.gallery li {
+    float: left;
+    width: 20%;
+    padding: 5% 0%;
+}
+
+/* ----------------------------------- mostrar la carta ------------------------- */
+.gallery li:hover {
+    z-index: 2;
+    position: relative;
+}
+
+
+.card-container {
+    -moz-perspective: 1000;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    width: 100%;
+    height: 0%;
+    padding-bottom: 30%;
+
+}
+
+
+.card-container .card-flipper {
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-container:hover .card-flipper {
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-container .card-front,
+.card-container .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    text-align: center;
+    background: #fafafa;
+    box-shadow: 0 0 0 1px #fff inset, 0 0 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.15);
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-container .card-front {
+    z-index: 2;
+}
+
+.card-container .card-front img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card-container .card-back {
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-container .card-back h2 {
+    padding: 10% 0%;
+    font-size: 25px;
+}
